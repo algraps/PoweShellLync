@@ -148,7 +148,7 @@ $zipFilename = "contacts.zip"
 $applicationPath = "C:\"
 $zipfile = $applicationPath + $zipFilename
 
-if (!(Test-Path $zipfile)) {
+if ((Test-Path $zipfile)) {
 	# create it	
 	Remove-Item -Recurse -Force $zipFile
 }
